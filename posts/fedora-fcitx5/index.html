@@ -281,7 +281,63 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
       <li><a href="https://ninjagopher.github.io/tags/fcitx5/">Fcitx5</a></li>
       <li><a href="https://ninjagopher.github.io/tags/fedora/">Fedora</a></li>
     </ul>
-  </footer>
+  </footer><div id="tw-comment"></div>
+<script>
+  
+  const getStoredTheme = () =>
+    localStorage.getItem("pref-theme") === "light"
+      ? "light"
+      : "dark";
+  const setGiscusTheme = () => {
+    const sendMessage = (message) => {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (iframe) {
+        iframe.contentWindow.postMessage(
+          { giscus: message },
+          "https://giscus.app"
+        );
+      }
+    };
+    sendMessage({ setConfig: { theme: getStoredTheme() } });
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const giscusAttributes = {
+      src: "https://giscus.app/client.js",
+      "data-repo": "ninjagopher\/ninjagopher.github.io",
+      "data-repo-id": "R_kgDOOUw7BA",
+      "data-category": "Announcements",
+      "data-category-id": "DIC_kwDOOUw7BM4Co1cz",
+      "data-mapping": "pathname",
+      "data-strict": "0",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "bottom",
+      "data-theme": getStoredTheme(),
+      "data-lang": "zh-CN",
+      "data-loading": "lazy",
+      crossorigin: "anonymous",
+    };
+
+    
+    const giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.querySelector("#tw-comment").appendChild(giscusScript);
+
+    
+    const themeSwitcher = document.querySelector("#theme-toggle");
+    if (themeSwitcher) {
+      themeSwitcher.addEventListener("click", setGiscusTheme);
+    }
+    const themeFloatSwitcher = document.querySelector("#theme-toggle-float");
+    if (themeFloatSwitcher) {
+      themeFloatSwitcher.addEventListener("click", setGiscusTheme);
+    }
+  });
+</script>
+
 </article>
     </main>
     

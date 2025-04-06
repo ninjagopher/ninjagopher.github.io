@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on NJGF</title>
-    <link>https://ninjagopher.github.io/posts/</link>
-    <description>Recent content in Posts on NJGF</description>
+    <title>Fcitx5 on NJGF</title>
+    <link>https://ninjagopher.github.io/tags/fcitx5/</link>
+    <description>Recent content in Fcitx5 on NJGF</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 06 Apr 2025 22:04:04 +0800</lastBuildDate>
-    <atom:link href="https://ninjagopher.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo 博客搭建（2025）</title>
-      <link>https://ninjagopher.github.io/posts/hugo-create/</link>
-      <pubDate>Sun, 06 Apr 2025 21:37:44 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
-      <description>&lt;p&gt;之前一直用 Hexo 作静态博客，发现生成速度确实有点感人，最近研究了一下常见的几个博客工具，最终选择了 Hugo，以下是具体的步骤&lt;/p&gt;
-&lt;h3 id=&#34;本地部署&#34;&gt;本地部署&lt;/h3&gt;
-&lt;p&gt;这里在 Fedora Linux 上搭建，其他操作系统的步骤也是差不多的&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://ninjagopher.github.io/tags/fcitx5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fedora 安装 fcitx5</title>
       <link>https://ninjagopher.github.io/posts/fedora-fcitx5/</link>

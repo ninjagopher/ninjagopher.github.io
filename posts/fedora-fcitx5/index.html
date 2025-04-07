@@ -7,20 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Fedora 安装 fcitx5 | NJGF</title>
 <meta name="keywords" content="fcitx5, Fedora">
-<meta name="description" content="参考 fcitx5，RIME，rime-ice
-安装 fcitx5
-使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：
-sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk
-雾凇拼音
-雾凇拼音——长期维护的简体词库
-# 创建文件夹
-mkdir -p ~/.local/share/fcitx5/rime/
-# 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录）
-git clone https://github.com/iDvel/rime-ice.git rime --depth 1
-# 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹
-cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
-小鹤双拼（可选）
-我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步">
+<meta name="description" content="Fedora Workspace 41 上安装 fcitx5 输入法">
 <meta name="author" content="">
 <link rel="canonical" href="https://ninjagopher.github.io/posts/fedora-fcitx5/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -71,10 +58,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
 </noscript><meta property="og:url" content="https://ninjagopher.github.io/posts/fedora-fcitx5/">
   <meta property="og:site_name" content="NJGF">
   <meta property="og:title" content="Fedora 安装 fcitx5">
-  <meta property="og:description" content="参考 fcitx5，RIME，rime-ice
-安装 fcitx5 使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：
-sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk 雾凇拼音 雾凇拼音——长期维护的简体词库
-# 创建文件夹 mkdir -p ~/.local/share/fcitx5/rime/ # 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录） git clone https://github.com/iDvel/rime-ice.git rime --depth 1 # 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹 cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime 小鹤双拼（可选） 我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步">
+  <meta property="og:description" content="Fedora Workspace 41 上安装 fcitx5 输入法">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -84,20 +68,7 @@ sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcit
     <meta property="article:tag" content="Fedora">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fedora 安装 fcitx5">
-<meta name="twitter:description" content="参考 fcitx5，RIME，rime-ice
-安装 fcitx5
-使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：
-sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk
-雾凇拼音
-雾凇拼音——长期维护的简体词库
-# 创建文件夹
-mkdir -p ~/.local/share/fcitx5/rime/
-# 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录）
-git clone https://github.com/iDvel/rime-ice.git rime --depth 1
-# 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹
-cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
-小鹤双拼（可选）
-我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步">
+<meta name="twitter:description" content="Fedora Workspace 41 上安装 fcitx5 输入法">
 
 
 <script type="application/ld+json">
@@ -126,7 +97,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
   "@type": "BlogPosting",
   "headline": "Fedora 安装 fcitx5",
   "name": "Fedora 安装 fcitx5",
-  "description": "参考 fcitx5，RIME，rime-ice\n安装 fcitx5 使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：\nsudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk 雾凇拼音 雾凇拼音——长期维护的简体词库\n# 创建文件夹 mkdir -p ~/.local/share/fcitx5/rime/ # 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录） git clone https://github.com/iDvel/rime-ice.git rime --depth 1 # 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹 cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime 小鹤双拼（可选） 我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步\n",
+  "description": "Fedora Workspace 41 上安装 fcitx5 输入法",
   "keywords": [
     "fcitx5", "Fedora"
   ],

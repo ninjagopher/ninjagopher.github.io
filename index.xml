@@ -13,38 +13,21 @@
       <link>https://ninjagopher.github.io/posts/fedora-fcitx5/</link>
       <pubDate>Mon, 07 Apr 2025 15:41:59 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/fedora-fcitx5/</guid>
-      <description>&lt;p&gt;参考 &lt;a href=&#34;https://fcitx-im.org/wiki/Install_Fcitx_5/zh-cn&#34;&gt;fcitx5&lt;/a&gt;，&lt;a href=&#34;https://rime.im/download/&#34;&gt;RIME&lt;/a&gt;，&lt;a href=&#34;https://github.com/iDvel/rime-ice&#34;&gt;rime-ice&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;安装-fcitx5&#34;&gt;安装 fcitx5&lt;/h3&gt;
-&lt;p&gt;使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;雾凇拼音&#34;&gt;雾凇拼音&lt;/h3&gt;
-&lt;p&gt;雾凇拼音——长期维护的简体词库&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建文件夹&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/.local/share/fcitx5/rime/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/iDvel/rime-ice.git rime --depth &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;小鹤双拼可选&#34;&gt;小鹤双拼（可选）&lt;/h3&gt;
-&lt;p&gt;我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步&lt;/p&gt;</description>
+      <description>Fedora Workspace 41 上安装 fcitx5 输入法</description>
     </item>
     <item>
       <title>Hugo 博客搭建（2025）</title>
       <link>https://ninjagopher.github.io/posts/hugo-create/</link>
       <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
-      <description>&lt;p&gt;之前一直用 Hexo 作静态博客，发现生成速度确实有点感人，最近研究了一下常见的几个博客工具，最终选择了 Hugo，以下是具体的步骤&lt;/p&gt;
-&lt;h3 id=&#34;本地部署&#34;&gt;本地部署&lt;/h3&gt;
-&lt;p&gt;这里在 Fedora Linux 上搭建，其他操作系统的步骤也是差不多的&lt;/p&gt;</description>
+      <description>使用 GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
     </item>
     <item>
       <title>Hexo 博客搭建（2025）</title>
       <link>https://ninjagopher.github.io/posts/hexo-create/</link>
       <pubDate>Sun, 06 Apr 2025 21:37:44 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hexo-create/</guid>
-      <description>&lt;p&gt;Hexo 是一个快速、简洁的静态博客框架，搭建起来相对简单。下面是使用 Hexo 搭建博客的基本步骤：&lt;/p&gt;
-&lt;h3 id=&#34;安装-nodejs-和-git&#34;&gt;安装 Node.js 和 Git&lt;/h3&gt;
-&lt;p&gt;这里使用 &lt;strong&gt;fnm&lt;/strong&gt;（Fast Node Manager）安装 Node.js 的 LTS 版本，参考 &lt;a href=&#34;https://nodejs.org/en/download&#34;&gt;Node.js&lt;/a&gt;&lt;/p&gt;</description>
+      <description>使用 GitHub Pages + GitHub Actions 自动部署 Hexo 博客</description>
     </item>
     <item>
       <title>关于</title>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="zh" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
 <link rel="mask-icon" href="https://ninjagopher.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ninjagopher.github.io/posts/fedora-fcitx5/">
+<link rel="alternate" hreflang="zh" href="https://ninjagopher.github.io/posts/fedora-fcitx5/">
 <noscript>
     <style>
         #theme-toggle,
@@ -75,7 +75,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
 安装 fcitx5 使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：
 sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk 雾凇拼音 雾凇拼音——长期维护的简体词库
 # 创建文件夹 mkdir -p ~/.local/share/fcitx5/rime/ # 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录） git clone https://github.com/iDvel/rime-ice.git rime --depth 1 # 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹 cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime 小鹤双拼（可选） 我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步">
-  <meta property="og:locale" content="en-US">
+  <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-04-06T22:04:04+08:00">
@@ -132,7 +132,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
   ],
   "articleBody": "参考 fcitx5，RIME，rime-ice\n安装 fcitx5 使用系统内置的包管理器安装（dnf 是 Fedora 内置的包管理器）：\nsudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-rime fcitx5-qt fcitx5-gtk 雾凇拼音 雾凇拼音——长期维护的简体词库\n# 创建文件夹 mkdir -p ~/.local/share/fcitx5/rime/ # 克隆雾凇拼音这个Rime配置到本地（我克隆到了 ~/Downloads/ 目录） git clone https://github.com/iDvel/rime-ice.git rime --depth 1 # 复制上面克隆到本地的文件夹内的所有文件到刚创建的文件夹 cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime 小鹤双拼（可选） 我使用小鹤双拼方案，所以这里修改一下，用全拼的可以跳过这一步\n# 编辑default.yaml配置文件 vi ~/.local/share/fcitx5/rime/default.yaml # - schema: double_pinyin_flypy # 小鹤双拼 这行移动到schema_list的最前面 修改候选词数量 默认候选词数量是 5，有需要可以修改\n# 编辑default.yaml配置文件 vi ~/.local/share/fcitx5/rime/default.yaml # page_size: 5 改为你想要的数量 关闭候选词拼音注释 默认候选词会有拼音注释，比如：你好[ni hao]，编辑 double_pinyin_flypy.schema.yaml（编辑哪个文件看你使用什么方案），注释下面这两行就可以关闭\nspelling_hints: 8 always_show_comments: true 然后到 Fcitx5 Configuration 添加 Rime，调整字体大小为 16 或者更大，通过 GNOME Tweaks 设置开机启动，自带的英文键盘可以删除\n配置环境变量（可选） Fedora Workspace 41 没添加也能正常使用，如果需要可以添加到 ~/.bashrc 或者 ~/.profile\nexport GTK_IM_MODULE=fcitx export QT_IM_MODULE=fcitx export XMODIFIERS=@im=fcitx export INPUT_METHOD=fcitx 重新加载 重启整个 fcitx5 框架，如果没起作用可以重启或者重新登录\nfcitx5-remote -r ",
   "wordCount" : "520",
-  "inLanguage": "en",
+  "inLanguage": "zh",
   "datePublished": "2025-04-06T22:04:04+08:00",
   "dateModified": "2025-04-06T22:04:04+08:00",
   "mainEntityOfPage": {
@@ -213,17 +213,17 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ninjagopher.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ninjagopher.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://ninjagopher.github.io/">主页</a>&nbsp;»&nbsp;<a href="https://ninjagopher.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Fedora 安装 fcitx5
     </h1>
-    <div class="post-meta"><span title='2025-04-06 22:04:04 +0800 CST'>April 6, 2025</span>&nbsp;·&nbsp;2 min
+    <div class="post-meta"><span title='2025-04-06 22:04:04 +0800 CST'>四月 6, 2025</span>&nbsp;·&nbsp;2 分钟
 
 </div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
+            <span class="details">目录</span>
         </summary>
 
         <div class="inner"><ul>
@@ -294,7 +294,7 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://ninjagopher.github.io/posts/hugo-create/">
-    <span class="title">« Prev</span>
+    <span class="title">« 上一页</span>
     <br>
     <span>Hugo 博客搭建（2025）</span>
   </a>
@@ -503,12 +503,12 @@ cp ~/Downloads/rime/* ~/.local/share/fcitx5/rime
 
         const copybutton = document.createElement('button');
         copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
+        copybutton.innerHTML = '复制';
 
         function copyingDone() {
-            copybutton.innerHTML = 'copied!';
+            copybutton.innerHTML = '已复制！';
             setTimeout(() => {
-                copybutton.innerHTML = 'copy';
+                copybutton.innerHTML = '复制';
             }, 2000);
         }
 

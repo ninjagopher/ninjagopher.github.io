@@ -6,12 +6,12 @@
     <description>Recent content in Linux on NJGF</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 06 Apr 2025 22:04:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Apr 2025 15:41:59 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fedora 安装 fcitx5</title>
       <link>https://ninjagopher.github.io/posts/fedora-fcitx5/</link>
-      <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
+      <pubDate>Mon, 07 Apr 2025 15:41:59 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/fedora-fcitx5/</guid>
       <description>&lt;p&gt;参考 &lt;a href=&#34;https://fcitx-im.org/wiki/Install_Fcitx_5/zh-cn&#34;&gt;fcitx5&lt;/a&gt;，&lt;a href=&#34;https://rime.im/download/&#34;&gt;RIME&lt;/a&gt;，&lt;a href=&#34;https://github.com/iDvel/rime-ice&#34;&gt;rime-ice&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;安装-fcitx5&#34;&gt;安装 fcitx5&lt;/h3&gt;

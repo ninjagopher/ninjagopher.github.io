@@ -6,12 +6,12 @@
     <description>Recent content in Hugo on NJGF</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 06 Apr 2025 21:37:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Apr 2025 22:04:04 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 博客搭建（2025）</title>
       <link>https://ninjagopher.github.io/posts/hugo-create/</link>
-      <pubDate>Sun, 06 Apr 2025 21:37:44 +0800</pubDate>
+      <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
       <description>&lt;p&gt;之前一直用 Hexo 作静态博客，发现生成速度确实有点感人，最近研究了一下常见的几个博客工具，最终选择了 Hugo，以下是具体的步骤&lt;/p&gt;
 &lt;h3 id=&#34;本地部署&#34;&gt;本地部署&lt;/h3&gt;

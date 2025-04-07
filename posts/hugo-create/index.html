@@ -65,8 +65,8 @@
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-04-06T21:37:44+08:00">
-    <meta property="article:modified_time" content="2025-04-06T21:37:44+08:00">
+    <meta property="article:published_time" content="2025-04-06T22:04:04+08:00">
+    <meta property="article:modified_time" content="2025-04-06T22:04:04+08:00">
     <meta property="article:tag" content="Blog">
     <meta property="article:tag" content="Hugo">
 <meta name="twitter:card" content="summary">
@@ -106,11 +106,11 @@
   "keywords": [
     "Blog", "Hugo"
   ],
-  "articleBody": "之前一直用 Hexo 作静态博客，发现生成速度确实有点感人，最近研究了一下常见的几个博客工具，最终选择了 Hugo，以下是具体的步骤\n本地部署 这里在 Fedora Linux 上搭建，其他操作系统的步骤也是差不多的\n首先使用内置的包管理器查看是否是最新版本（dnf 是 Fedora 内置的包管理器），是则通过dnf install hugo命令安装，否则到 GitHub 下载最新版本 Hugo（hugo_extended_withdeploy_x.xxx.x_linux-amd64.tar.gz）\ndnf info hugo # 或者：dnf repoquery hugo 我在 GitHub 下载的最新版，通过命令解压：\ntar -xzvf hugo_extended_withdeploy_0.xxx.0_linux-amd64.tar.gz 解压后把 hugo 这个文件移动到 /usr/local/bin 目录\nsudo mv hugo /usr/local/bin 查看 Hugo 版本：\nhugo version 创建本地博客、进入博客目录\nhugo new site # 注意替换名字 cd 安装主题\n在 Hugo Themes 找自己喜欢的主题，这里以 PaperMod 主题举例，通过submodule的方式安装：\n# 注意下面的4条命令都要在博客根目录下运行 git init git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod # needed when you reclone your repo (submodules may not get cloned automatically) git submodule update --init --recursive # update git submodule update --remote --merge 然后运行下面的命令应用主题\necho \"theme = 'PaperMod'\" \u003e\u003e hugo.toml 新建一篇文章\nhugo new content ./content/posts/my-first-post.md 启动本地服务器（新建的文章默认是草稿，-D参数表示构建草稿内容）\nhugo server -D GitHub Actions 自动部署 创建一个 Public 仓库，仓库名为 .github.io，创建的时候添加一个 README.md 文件（不添加的话仓库没有分支，会影响后面的工作流），把本地目录的 hugo.toml 这个文件的 baseURL 为 https://username.github.io/\n然后再创建一个 Private 仓库，可以命名为 hugo-source-code，不需要添加任何文件\n生成SHH密钥对（rsa）用于本地连接GitHub：\nssh-keygen -t rsa -b 4096 -C 将.pub内容复制，来到GitHub的 Settings\u003e SSH and GPG Keys，点击New SSH key，填写Title，Key type 默认Authenticaiton Key，粘贴到Key的区域，点击Add SSH key\n输入下面的命令测试连接：\nssh -T git@github.com 在 ~/.ssh 目录生成SSH密钥对（ed25519）：\ncd ~/.ssh/ ssh-keygen -t ed25519 -C \"hugo-deploy-key\" -f ./hugo_deploy_key -N \"\" 复制.pub公钥的内容，到 Public 仓库 Settings \u003e Deploy keys，点击 Add deploy key，输入Title、Key，勾选“Allow write access”。 复制私钥的内容（没有扩展名的文件），到到 Private 仓库 Settings \u003e Secrets and variables \u003e Actions，点击 New repository secret，输入Name、Secret，将私钥的内容粘贴到 Secret 的区域（注意保留头尾两行，最后要有一行空行），点击 Add secret。\n回到本地 hugoblog 博客目录，新建一个 .gitignore 文件，根据情况添加内容：\n# Generated files by hugo /public/ /resources/_gen/ /assets/jsconfig.json hugo_stats.json hugo-wfl-edit.yaml # Executable may be added to repository hugo.exe hugo.darwin hugo.linux # Temporary lock file while building /.hugo_build.lock # Others .DS_Store node_modules dist tmp 创建工作流文件：\nmkdir -p .github/workflows touch .github/workflows/hugo.yaml hugo.yaml 内容，注意替换自己的信息\nname: Deploy to Public Repo on: push: branches: - main jobs: deploy: runs-on: ubuntu-latest steps: # Checkout - name: Checkout private repo uses: actions/checkout@v4 with: submodules: recursive fetch-depth: 0 # SSH - name: Setup SSH uses: webfactory/ssh-agent@v0.9.1 with: ssh-private-key: ${{ secrets.HUGO_DEPLOY_KEY }} # Install Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: \"0.145.0\" # 填你的hugo版本 # Build the Hugo site - name: Build Hugo site run: hugo # Deploy to the public repo via SSH - name: Deploy to public repository run: | rm -rf deploy-repo git clone --single-branch --branch main git@github.com:/.github.io.git deploy-repo cd deploy-repo rm -rf * cp -r ../public/* . git config user.email \"example@gmail.com\" git config user.name \"username\" git add . git commit -m \"Auto deploy Hugo site $(date '+%Y-%m-%d %H:%M:%S')\" git push origin main 配置用户名和邮箱、关联远程 Private 仓库，add commit push\n# 注意替换 git config user.email “example@gmail.com” git config user.name \"username\" # 查看配置 git config -l git remote add origin git@github.com:username/hugo-source-code.git git add . git commit -m \"First commit\" git push -u origin main 然后到Private 仓库的 Actions 界面看是否 run 成功\n参考 Hugo 官网\n",
-  "wordCount" : "1253",
+  "articleBody": "之前一直用 Hexo 作静态博客，发现生成速度确实有点感人，最近研究了一下常见的几个博客工具，最终选择了 Hugo，以下是具体的步骤\n本地部署 这里在 Fedora Linux 上搭建，其他操作系统的步骤也是差不多的\n首先使用内置的包管理器查看是否是最新版本（dnf 是 Fedora 内置的包管理器），是则通过dnf install hugo命令安装，否则到 GitHub 下载最新版本 Hugo（hugo_extended_withdeploy_x.xxx.x_linux-amd64.tar.gz）\ndnf info hugo # 或者：dnf repoquery hugo 我在 GitHub 下载的最新版，通过命令解压：\ntar -xzvf hugo_extended_withdeploy_0.xxx.0_linux-amd64.tar.gz 解压后把 hugo 这个文件移动到 /usr/local/bin 目录\nsudo mv hugo /usr/local/bin 查看 Hugo 版本：\nhugo version 创建本地博客、进入博客目录\nhugo new site # 注意替换名字 cd 安装主题\n在 Hugo Themes 找自己喜欢的主题，这里以 PaperMod 主题举例，通过submodule的方式安装：\n# 注意下面的4条命令都要在博客根目录下运行 git init git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod # needed when you reclone your repo (submodules may not get cloned automatically) git submodule update --init --recursive # update git submodule update --remote --merge 然后运行下面的命令应用主题\necho \"theme = 'PaperMod'\" \u003e\u003e hugo.toml 新建一篇文章\nhugo new content ./content/posts/my-first-post.md 启动本地服务器（新建的文章默认是草稿，-D参数表示构建草稿内容）\nhugo server -D GitHub Actions 自动部署 创建一个 Public 仓库，仓库名为 .github.io，创建的时候添加一个 README.md 文件（不添加的话仓库没有分支，会影响后面的工作流），把本地目录的 hugo.toml 这个文件的 baseURL 为 https://username.github.io/\n然后再创建一个 Private 仓库，可以命名为 hugo-source-code，不需要添加任何文件\n生成SHH密钥对（rsa）用于本地连接GitHub：\nssh-keygen -t rsa -b 4096 -C 将.pub内容复制，来到GitHub的 Settings\u003e SSH and GPG Keys，点击New SSH key，填写Title，Key type 默认Authenticaiton Key，粘贴到Key的区域，点击Add SSH key\n输入下面的命令测试连接：\nssh -T git@github.com 在 ~/.ssh 目录生成SSH密钥对（ed25519）：\ncd ~/.ssh/ ssh-keygen -t ed25519 -C \"hugo-deploy-key\" -f ./hugo_deploy_key -N \"\" 复制.pub公钥的内容，到 Public 仓库 Settings \u003e Deploy keys，点击 Add deploy key，输入Title、Key，勾选“Allow write access”。 复制私钥的内容（没有扩展名的文件），到到 Private 仓库 Settings \u003e Secrets and variables \u003e Actions，点击 New repository secret，输入Name、Secret，将私钥的内容粘贴到 Secret 的区域（注意保留头尾两行，最后要有一行空行），点击 Add secret。\n回到本地 hugoblog 博客目录，新建一个 .gitignore 文件，根据情况添加内容：\n# Generated files by hugo /public/ /resources/_gen/ /assets/jsconfig.json hugo_stats.json hugo-wfl-edit.yaml # Executable may be added to repository hugo.exe hugo.darwin hugo.linux # Temporary lock file while building /.hugo_build.lock # Others .DS_Store node_modules dist tmp 创建工作流文件：\nmkdir -p .github/workflows touch .github/workflows/hugo.yaml hugo.yaml 内容，注意替换自己的信息\nname: Deploy to Public Repo on: push: branches: - main jobs: deploy: runs-on: ubuntu-latest steps: # Set timezone - name: Set timezone run: | sudo timedatectl set-timezone Asia/Shanghai # Checkout - name: Checkout private repo uses: actions/checkout@v4 with: submodules: recursive # fetch-depth: 0 # SSH - name: Setup SSH uses: webfactory/ssh-agent@v0.9.1 with: ssh-private-key: ${{ secrets.HUGO_DEPLOY_KEY }} # Set up Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: \"0.145.0\" # 填你的hugo版本 # Build - name: Build Hugo site run: hugo # Deploy to the public repo via SSH - name: Deploy to public repository run: | rm -rf deploy-repo git clone --single-branch --branch main git@github.com:/.github.io.git deploy-repo cd deploy-repo rm -rf * cp -r ../public/* . git config user.email \"example@gmail.com\" git config user.name \"username\" git add . git commit -m \"Auto deploy Hugo site $(date '+%Y-%m-%d %H:%M:%S')\" git push origin main 配置用户名和邮箱、关联远程 Private 仓库，add commit push\n# 注意替换 git config user.email “example@gmail.com” git config user.name \"username\" # 查看配置 git config -l git remote add origin git@github.com:username/hugo-source-code.git git add . git commit -m \"First commit\" git push -u origin main 然后到Private 仓库的 Actions 界面看是否 run 成功\n参考 Hugo 官网\n",
+  "wordCount" : "1265",
   "inLanguage": "zh",
-  "datePublished": "2025-04-06T21:37:44+08:00",
-  "dateModified": "2025-04-06T21:37:44+08:00",
+  "datePublished": "2025-04-06T22:04:04+08:00",
+  "dateModified": "2025-04-06T22:04:04+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ninjagopher.github.io/posts/hugo-create/"
@@ -193,7 +193,7 @@
     <h1 class="post-title entry-hint-parent">
       Hugo 博客搭建（2025）
     </h1>
-    <div class="post-meta"><span title='2025-04-06 21:37:44 +0800 CST'>四月 6, 2025</span>&nbsp;·&nbsp;3 分钟
+    <div class="post-meta"><span title='2025-04-06 22:04:04 +0800 CST'>四月 6, 2025</span>&nbsp;·&nbsp;3 分钟
 
 </div>
   </header> <div class="toc">
@@ -289,24 +289,28 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Set timezone</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Set timezone</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">          sudo timedatectl set-timezone Asia/Shanghai</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Checkout</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout private repo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="l">recursive</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#          fetch-depth: 0</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># SSH</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup SSH</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">webfactory/ssh-agent@v0.9.1</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">ssh-private-key</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.HUGO_DEPLOY_KEY }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Install Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Set up Hugo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Set up Hugo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.145.0&#34;</span><span class="w"> </span><span class="c"># 填你的hugo版本</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Build the Hugo site</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Build</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Hugo site</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
@@ -345,8 +349,8 @@
       <li><a href="https://ninjagopher.github.io/tags/hugo/">Hugo</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://ninjagopher.github.io/posts/fedora-fcitx5/">
-    <span class="title">下一页 »</span>
+  <a class="prev" href="https://ninjagopher.github.io/posts/fedora-fcitx5/">
+    <span class="title">« 上一页</span>
     <br>
     <span>Fedora 安装 fcitx5</span>
   </a>

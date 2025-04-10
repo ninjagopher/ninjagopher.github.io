@@ -13,7 +13,7 @@
       <link>https://ninjagopher.github.io/posts/hugo-create/</link>
       <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
-      <description>使用 GitHub Pages 和 GitHub Actions 搭建和部署 Hugo 博客</description>
+      <description>GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
     </item>
   </channel>
 </rss>

@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 06 Apr 2025 22:04:04 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 博客搭建（2025）</title>
+      <title>Hugo 博客搭建和部署（2025）</title>
       <link>https://ninjagopher.github.io/posts/hugo-create/</link>
       <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
-      <description>使用 GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
+      <description>GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
     </item>
   </channel>
 </rss>

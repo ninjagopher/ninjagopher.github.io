@@ -6,14 +6,21 @@
     <description>Recent content on NJGF</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 06 Apr 2025 22:04:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Apr 2025 15:41:59 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 博客搭建（2025）</title>
+      <title>Fedora 安装 fcitx5</title>
+      <link>https://ninjagopher.github.io/posts/fcitx5-fedora/</link>
+      <pubDate>Mon, 07 Apr 2025 15:41:59 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/fcitx5-fedora/</guid>
+      <description>Fedora Workspace 41 上安装 Fcitx5 输入法</description>
+    </item>
+    <item>
+      <title>Hugo 博客搭建和部署（2025）</title>
       <link>https://ninjagopher.github.io/posts/hugo-create/</link>
       <pubDate>Sun, 06 Apr 2025 22:04:04 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/hugo-create/</guid>
-      <description>使用 GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
+      <description>GitHub Pages + GitHub Actions 自动部署 Hugo 博客</description>
     </item>
     <item>
       <title>关于</title>

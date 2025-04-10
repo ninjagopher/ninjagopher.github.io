@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://ninjagopher.github.io/robots.txtsitemap.xml
+Disallow:
+Sitemap: https://ninjagopher.github.io/sitemap.xml

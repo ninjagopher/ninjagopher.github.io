@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linux on NJGF</title>
+    <title>Linux on DeepSink</title>
     <link>https://ninjagopher.github.io/categories/linux/</link>
-    <description>Recent content in Linux on NJGF</description>
+    <description>Recent content in Linux on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 07 Apr 2025 15:41:59 +0800</lastBuildDate>

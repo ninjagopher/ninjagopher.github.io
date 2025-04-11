@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://username.github.io/sitemap.xml
+Sitemap: https://ninjagopher.github.io/sitemap.xml

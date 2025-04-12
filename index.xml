@@ -6,8 +6,15 @@
     <description>Recent content on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 07 Apr 2025 15:41:59 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Apr 2025 15:33:10 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gnome 扩展分享</title>
+      <link>https://ninjagopher.github.io/posts/gnome-extension/</link>
+      <pubDate>Sat, 12 Apr 2025 15:33:10 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/gnome-extension/</guid>
+      <description>分享一些 Fedora Linux 上使用的 Gnome 扩展</description>
+    </item>
     <item>
       <title>Fedora 安装 Fcitx5</title>
       <link>https://ninjagopher.github.io/posts/fcitx5-fedora/</link>

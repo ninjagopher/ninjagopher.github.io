@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Fedora on DeepSink</title>
-    <link>https://ninjagopher.github.io/tags/fedora/</link>
-    <description>Recent content in Fedora on DeepSink</description>
+    <title>Gnome on DeepSink</title>
+    <link>https://ninjagopher.github.io/tags/gnome/</link>
+    <description>Recent content in Gnome on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 12 Apr 2025 15:33:10 +0800</lastBuildDate>
-    <atom:link href="https://ninjagopher.github.io/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ninjagopher.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gnome 扩展分享</title>
       <link>https://ninjagopher.github.io/posts/gnome-extension/</link>
       <pubDate>Sat, 12 Apr 2025 15:33:10 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/gnome-extension/</guid>
       <description>分享一些 Fedora Linux 上使用的 Gnome 扩展</description>
-    </item>
-    <item>
-      <title>Fedora 安装 Fcitx5</title>
-      <link>https://ninjagopher.github.io/posts/fcitx5-fedora/</link>
-      <pubDate>Mon, 07 Apr 2025 15:41:59 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/fcitx5-fedora/</guid>
-      <description>在 Fedora Workspace 41 上安装 Fcitx5 输入法</description>
     </item>
   </channel>
 </rss>

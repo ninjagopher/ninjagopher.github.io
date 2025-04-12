@@ -53,16 +53,6 @@
     </url>
   
     <url>
-      <loc>https://ninjagopher.github.io/posts/gnome-extension/</loc>
-      
-        <lastmod>2025-04-12T15:33:10+08:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-    </url>
-  
-    <url>
       <loc>https://ninjagopher.github.io/categories/linux/</loc>
       
         <lastmod>2025-04-12T15:33:10+08:00</lastmod>
@@ -84,6 +74,16 @@
   
     <url>
       <loc>https://ninjagopher.github.io/posts/</loc>
+      
+        <lastmod>2025-04-12T15:33:10+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/posts/gnome-extensions/</loc>
       
         <lastmod>2025-04-12T15:33:10+08:00</lastmod>
       

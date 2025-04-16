@@ -6,8 +6,15 @@
     <description>Recent content on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 14 Apr 2025 23:05:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 21:40:45 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>v2rayA 透明代理</title>
+      <link>https://ninjagopher.github.io/posts/tproxy-v2raya/</link>
+      <pubDate>Wed, 16 Apr 2025 21:40:45 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/tproxy-v2raya/</guid>
+      <description>Fedora Workstation 41 配置 v2rayA 实现透明代理</description>
+    </item>
     <item>
       <title>安装和配置 Obsidian</title>
       <link>https://ninjagopher.github.io/posts/obsidian-config/</link>
@@ -27,7 +34,7 @@
       <link>https://ninjagopher.github.io/posts/fcitx5-fedora/</link>
       <pubDate>Mon, 07 Apr 2025 15:41:59 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/fcitx5-fedora/</guid>
-      <description>在 Fedora Workspace 41 上安装 Fcitx5 输入法</description>
+      <description>在 Fedora Workstation 41 上安装 Fcitx5 输入法</description>
     </item>
     <item>
       <title>Hugo 博客搭建和部署</title>

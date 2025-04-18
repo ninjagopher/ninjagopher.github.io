@@ -6,8 +6,15 @@
     <description>Recent content in Posts on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 17 Apr 2025 13:54:09 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Apr 2025 00:35:28 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neovim 笔记</title>
+      <link>https://ninjagopher.github.io/posts/neovim-note/</link>
+      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/neovim-note/</guid>
+      <description>Neovim + LazyVim 笔记</description>
+    </item>
     <item>
       <title>Git Note</title>
       <link>https://ninjagopher.github.io/posts/git-note/</link>
@@ -67,6 +74,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 输出：Hi username! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 然后克隆项目&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Fedora 上使用 Samba</title>
+      <link>https://ninjagopher.github.io/posts/samba-linux/</link>
+      <pubDate>Thu, 17 Apr 2025 02:47:51 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/samba-linux/</guid>
+      <description>Fedora Workstation 上配置 Samba 实现文件共享</description>
     </item>
     <item>
       <title>v2rayA 透明代理</title>

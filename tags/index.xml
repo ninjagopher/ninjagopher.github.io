@@ -6,8 +6,29 @@
     <description>Recent content on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 16 Apr 2025 21:40:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Apr 2025 00:35:28 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LazyVim</title>
+      <link>https://ninjagopher.github.io/tags/lazyvim/</link>
+      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/tags/lazyvim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>https://ninjagopher.github.io/tags/neovim/</link>
+      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/tags/neovim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>https://ninjagopher.github.io/tags/vim/</link>
+      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Linux</title>
       <link>https://ninjagopher.github.io/tags/linux/</link>

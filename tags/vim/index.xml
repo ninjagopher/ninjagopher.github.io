@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vim on DeepSink</title>
+    <link>https://ninjagopher.github.io/tags/vim/</link>
+    <description>Recent content in Vim on DeepSink</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 18 Apr 2025 00:35:28 +0800</lastBuildDate>
+    <atom:link href="https://ninjagopher.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neovim 笔记</title>
+      <link>https://ninjagopher.github.io/posts/neovim-note/</link>
+      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/neovim-note/</guid>
+      <description>Neovim + LazyVim 笔记</description>
+    </item>
+  </channel>
+</rss>

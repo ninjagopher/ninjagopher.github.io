@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>v2rayA 透明代理 | DeepSink</title>
+<title>v2rayA 透明代理 | 221B</title>
 <meta name="keywords" content="v2rayA, TProxy, 透明代理">
 <meta name="description" content="Docker 安装 v2rayA、配置透明代理">
 <meta name="author" content="">
@@ -56,7 +56,7 @@
 
     </style>
 </noscript><meta property="og:url" content="https://ninjagopher.github.io/posts/tproxy-v2raya/">
-  <meta property="og:site_name" content="DeepSink">
+  <meta property="og:site_name" content="221B">
   <meta property="og:title" content="v2rayA 透明代理">
   <meta property="og:description" content="Docker 安装 v2rayA、配置透明代理">
   <meta property="og:locale" content="zh">
@@ -102,7 +102,7 @@
   "keywords": [
     "v2rayA", "TProxy", "透明代理"
   ],
-  "articleBody": " Podman 配置似乎有点麻烦，建议使用 Docker\n📥 安装 Docker 电脑连接手机热点，手机代理工具打开局域网共享，然后编辑电脑上的 ~/.bashrc 文件，加入下面两行：\n# 注意修改IP、端口，后面容器运行起来之后可以注释掉 export http_proxy=\"http://192.168.1.101:9870\" export https_proxy=\"http://192.168.1.101:9870\" 加载配置：\nsource ~/.bashrc 通过命令下载安装脚本:\ncurl -fsSL https://get.docker.com -o get-docker.sh 通过运行上面下载的脚本安装Docker：\nsudo sh get-docker.sh ⚙️ 配置 Daemon 代理 给 Docker Daemon 配置代理，等容器 run 起来之后再移除代理配置 创建文件夹：\nsudo mkdir -p /etc/systemd/system/docker.service.d 创建、编辑 http-proxy.conf 文件：\nsudo vi /etc/systemd/system/docker.service.d/http-proxy.conf 添加内容：\n# 注意修改IP、端口，同样可以在后面容器运行起来之后注释掉 [Service] Environment=\"HTTP_PROXY=192.168.1.101:9870\" Environment=\"HTTPS_PROXY=192.168.1.101:9870\" Environment=\"NO_PROXY=127.0.0.1\" 重新加载：\nsudo systemctl daemon-reload sudo systemctl restart docker # 使用下面的命令查看代理配置是否被加载 sudo systemctl show --property=Environment docker ▶️ 运行 v2rayA 容器 设置 Docker 服务开机启动，并且立即启动 Docker 服务：\nsudo systemctl enable --now docker 拉取镜像：\nsudo docker pull mzz2017/v2raya # 查看镜像 sudo docker images 判断 Linux 系统是否原生使用 nftables：\niptables -V 看到 iptables v1.8.10 (nf_tables) 这样的输出说明是原生使用 nftables，直接复制下面的命令运行；否则，将命令中的 on 改为 off、 nftables 改为 legacy，然后运行\n运行 v2rayA 容器：\nsudo docker run -d \\ --restart=always \\ --privileged \\ --network=host \\ --name v2raya \\ -e V2RAYA_LOG_FILE=/tmp/v2raya.log \\ -e V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray \\ -e V2RAYA_NFTABLES_SUPPORT=on \\ -e IPTABLES_MODE=nftables \\ -v /lib/modules:/lib/modules:ro \\ -v /etc/resolv.conf:/etc/resolv.conf \\ -v /etc/v2raya:/etc/v2raya \\ mzz2017/v2raya 查看容器：\nsudo docker ps 🌐 设置透明代理 容器正常运行后，分别移除 ~/.bashrc 和 /etc/systemd/system/docker.service.d/http-proxy.conf 的代理配置（把添加的内容注释掉）\n重新加载 systemd 配置并重启 Docker 服务：\nsudo systemctl daemon-reload sudo systemctl restart docker 浏览器打开 localhost:2017 ，新建一个用户，点击import导入订阅， 右上角切换语言，点击“设置”，设置透明代理：\n项 值 透明代理/系统代理 选择最后一项 透明代理/系统代理实现方式 redirect 规则端口的分流模式 RoutingA 防止DNS污染 关闭 特殊模式 关闭 TCPFastOpen 关闭 嗅探 关闭 多路复用 关闭 自动更新订阅 每隔一段时间，下面时间自己填 解析订阅链接 不进行分流 选择节点，点击右上角的红色按钮开始运行，最后打开一个 404 网站测试 🔚\n📖 参考资料 v2rayA-Docker\n最佳代理实践(2024-12-19)\n",
+  "articleBody": " Podman 配置似乎有点麻烦，建议使用 Docker\n📥 安装 Docker 电脑连接手机热点，手机代理工具打开局域网共享，然后编辑电脑上的 ~/.bashrc 文件，加入下面两行：\n# 注意修改IP、端口，后面容器运行起来之后可以注释掉 export http_proxy=\"http://192.168.1.101:9870\" export https_proxy=\"http://192.168.1.101:9870\" 加载配置：\nsource ~/.bashrc 通过命令下载安装脚本:\ncurl -fsSL https://get.docker.com -o get-docker.sh 通过运行上面下载的脚本安装Docker：\nsudo sh get-docker.sh ⚙️ 配置 Daemon 代理 给 Docker Daemon 配置代理，等容器 run 起来之后再移除代理配置 创建文件夹：\nsudo mkdir -p /etc/systemd/system/docker.service.d 创建、编辑 http-proxy.conf 文件：\nsudo vi /etc/systemd/system/docker.service.d/http-proxy.conf 添加内容：\n# 注意修改IP、端口，同样可以在后面容器运行起来之后注释掉 [Service] Environment=\"HTTP_PROXY=192.168.1.101:9870\" Environment=\"HTTPS_PROXY=192.168.1.101:9870\" Environment=\"NO_PROXY=127.0.0.1\" 重新加载：\nsudo systemctl daemon-reload sudo systemctl restart docker # 使用下面的命令查看代理配置是否被加载 sudo systemctl show --property=Environment docker ▶️ 运行 v2rayA 容器 设置 Docker 服务开机启动，并且立即启动 Docker 服务：\nsudo systemctl enable --now docker 拉取镜像：\nsudo docker pull mzz2017/v2raya # 查看镜像 sudo docker images 判断 Linux 系统是否原生使用 nftables：\niptables -V 看到 iptables v1.8.10 (nf_tables) 这样的输出说明是原生使用 nftables，直接复制下面的命令运行；否则，将命令中的 on 改为 off、 nftables 改为 legacy，然后运行\n运行 v2rayA 容器：\nsudo docker run -d \\ --restart=always \\ --privileged \\ --network=host \\ --name v2raya \\ -e V2RAYA_LOG_FILE=/tmp/v2raya.log \\ -e V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray \\ -e V2RAYA_NFTABLES_SUPPORT=on \\ -e IPTABLES_MODE=nftables \\ -v /lib/modules:/lib/modules:ro \\ -v /etc/resolv.conf:/etc/resolv.conf \\ -v /etc/v2raya:/etc/v2raya \\ mzz2017/v2raya 查看容器：\nsudo docker ps 🌐 设置透明代理 容器正常运行后，分别移除 ~/.bashrc 和 /etc/systemd/system/docker.service.d/http-proxy.conf 的代理配置（把添加的内容注释掉）\n重新加载 systemd 配置并重启 Docker 服务：\nsudo systemctl daemon-reload sudo systemctl restart docker 浏览器打开 localhost:2017 ，新建一个用户，点击import导入订阅， 右上角切换语言，点击“设置”，设置透明代理：\n项 值 透明代理/系统代理 选择最后一项 透明代理/系统代理实现方式 redirect 规则端口的分流模式 RoutingA 防止DNS污染 关闭 特殊模式 supervisor TCPFastOpen 关闭 嗅探 Http + TLS 多路复用 关闭 自动更新订阅 每隔一段时间，下面时间自己填 解析订阅链接 不进行分流 选择节点，点击右上角的红色按钮开始运行，最后打开一个 404 网站测试 🔚\n📖 参考资料 v2rayA-Docker\n最佳代理实践(2024-12-19)\n",
   "wordCount" : "715",
   "inLanguage": "zh",
   "datePublished": "2025-04-16T21:40:45+08:00",
@@ -113,7 +113,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "DeepSink",
+    "name": "221B",
     "logo": {
       "@type": "ImageObject",
       "url": "https://ninjagopher.github.io/favicon.png"
@@ -139,7 +139,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ninjagopher.github.io/" accesskey="h" title="DeepSink (Alt + H)">DeepSink</a>
+            <a href="https://ninjagopher.github.io/" accesskey="h" title="221B (Alt + H)">221B</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -174,6 +174,11 @@
                     <span>Tags</span>
                 </a>
             </li>
+            <li>
+                <a href="https://ninjagopher.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -185,7 +190,7 @@
     <h1 class="post-title entry-hint-parent">
       v2rayA 透明代理
     </h1>
-    <div class="post-meta"><span title='2025-04-16 21:40:45 +0800 CST'>四月 16, 2025</span>&nbsp;·&nbsp;2 分钟
+    <div class="post-meta"><span title='2025-04-16 21:40:45 +0800 CST'>四月 16, 2025</span>
 
 </div>
   </header> <div class="toc">
@@ -300,7 +305,7 @@
       </tr>
       <tr>
           <td>特殊模式</td>
-          <td style="text-align: center">关闭</td>
+          <td style="text-align: center">supervisor</td>
       </tr>
       <tr>
           <td>TCPFastOpen</td>
@@ -308,7 +313,7 @@
       </tr>
       <tr>
           <td>嗅探</td>
-          <td style="text-align: center">关闭</td>
+          <td style="text-align: center">Http + TLS</td>
       </tr>
       <tr>
           <td>多路复用</td>
@@ -480,7 +485,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://ninjagopher.github.io/">DeepSink</a></span> · 
+        <span>&copy; 2025 <a href="https://ninjagopher.github.io/">221B</a></span> · 
 
     <span>
         Powered by

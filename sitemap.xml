@@ -5,7 +5,7 @@
     <url>
       <loc>https://ninjagopher.github.io/tags/</loc>
       
-        <lastmod>2025-04-18T00:35:28+08:00</lastmod>
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -15,7 +15,7 @@
     <url>
       <loc>https://ninjagopher.github.io/categories/</loc>
       
-        <lastmod>2025-04-18T00:35:28+08:00</lastmod>
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -25,7 +25,7 @@
     <url>
       <loc>https://ninjagopher.github.io/</loc>
       
-        <lastmod>2025-04-18T00:35:28+08:00</lastmod>
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -33,9 +33,19 @@
     </url>
   
     <url>
-      <loc>https://ninjagopher.github.io/tags/lazyvim/</loc>
+      <loc>https://ninjagopher.github.io/tags/fedora/</loc>
       
-        <lastmod>2025-04-18T00:35:28+08:00</lastmod>
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/posts/fedora41/</loc>
+      
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -44,6 +54,36 @@
   
     <url>
       <loc>https://ninjagopher.github.io/categories/linux/</loc>
+      
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/tags/linux/</loc>
+      
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/posts/</loc>
+      
+        <lastmod>2025-04-18T18:10:18+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/tags/lazyvim/</loc>
       
         <lastmod>2025-04-18T00:35:28+08:00</lastmod>
       
@@ -73,16 +113,6 @@
     </url>
   
     <url>
-      <loc>https://ninjagopher.github.io/posts/</loc>
-      
-        <lastmod>2025-04-18T00:35:28+08:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-    </url>
-  
-    <url>
       <loc>https://ninjagopher.github.io/tags/vim/</loc>
       
         <lastmod>2025-04-18T00:35:28+08:00</lastmod>
@@ -93,9 +123,39 @@
     </url>
   
     <url>
+      <loc>https://ninjagopher.github.io/tags/git/</loc>
+      
+        <lastmod>2025-04-17T13:54:09+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
       <loc>https://ninjagopher.github.io/posts/git-note/</loc>
       
         <lastmod>2025-04-17T13:54:09+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/tags/github/</loc>
+      
+        <lastmod>2025-04-17T13:54:09+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/tags/ssh/</loc>
+      
+        <lastmod>2025-04-17T13:52:18+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -123,9 +183,19 @@
     </url>
   
     <url>
-      <loc>https://ninjagopher.github.io/tags/linux/</loc>
+      <loc>https://ninjagopher.github.io/tags/samba/</loc>
       
-        <lastmod>2025-04-16T21:40:45+08:00</lastmod>
+        <lastmod>2025-04-17T02:47:51+08:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+    </url>
+  
+    <url>
+      <loc>https://ninjagopher.github.io/tags/smb/</loc>
+      
+        <lastmod>2025-04-17T02:47:51+08:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -164,16 +234,6 @@
   
     <url>
       <loc>https://ninjagopher.github.io/tags/appimage/</loc>
-      
-        <lastmod>2025-04-14T23:05:22+08:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-    </url>
-  
-    <url>
-      <loc>https://ninjagopher.github.io/tags/fedora/</loc>
       
         <lastmod>2025-04-14T23:05:22+08:00</lastmod>
       

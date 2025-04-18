@@ -6,14 +6,28 @@
     <description>Recent content in Linux on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 18 Apr 2025 00:35:28 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Apr 2025 18:10:18 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Neovim 笔记</title>
+      <title>Fedora 41</title>
+      <link>https://ninjagopher.github.io/posts/fedora41/</link>
+      <pubDate>Fri, 18 Apr 2025 18:10:18 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/fedora41/</guid>
+      <description>安装 Fedora Workstation 41 之后的一些配置</description>
+    </item>
+    <item>
+      <title>Neovim Note</title>
       <link>https://ninjagopher.github.io/posts/neovim-note/</link>
       <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/neovim-note/</guid>
       <description>Neovim + LazyVim 笔记</description>
+    </item>
+    <item>
+      <title>Fedora 上使用 Samba</title>
+      <link>https://ninjagopher.github.io/posts/samba-linux/</link>
+      <pubDate>Thu, 17 Apr 2025 02:47:51 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/samba-linux/</guid>
+      <description>Fedora Workstation 上配置 Samba 实现局域网文件共享</description>
     </item>
     <item>
       <title>v2rayA 透明代理</title>

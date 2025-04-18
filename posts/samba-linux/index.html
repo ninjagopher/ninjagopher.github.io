@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Fedora 上使用 Samba | DeepSink</title>
-<meta name="keywords" content="">
-<meta name="description" content="Fedora Workstation 上配置 Samba 实现文件共享">
+<meta name="keywords" content="Samba, SMB">
+<meta name="description" content="Fedora Workstation 上配置 Samba 实现局域网文件共享">
 <meta name="author" content="">
 <link rel="canonical" href="https://ninjagopher.github.io/posts/samba-linux/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -58,15 +58,17 @@
 </noscript><meta property="og:url" content="https://ninjagopher.github.io/posts/samba-linux/">
   <meta property="og:site_name" content="DeepSink">
   <meta property="og:title" content="Fedora 上使用 Samba">
-  <meta property="og:description" content="Fedora Workstation 上配置 Samba 实现文件共享">
+  <meta property="og:description" content="Fedora Workstation 上配置 Samba 实现局域网文件共享">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-04-17T02:47:51+08:00">
     <meta property="article:modified_time" content="2025-04-17T02:47:51+08:00">
+    <meta property="article:tag" content="Samba">
+    <meta property="article:tag" content="SMB">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fedora 上使用 Samba">
-<meta name="twitter:description" content="Fedora Workstation 上配置 Samba 实现文件共享">
+<meta name="twitter:description" content="Fedora Workstation 上配置 Samba 实现局域网文件共享">
 
 
 <script type="application/ld+json">
@@ -95,9 +97,9 @@
   "@type": "BlogPosting",
   "headline": "Fedora 上使用 Samba",
   "name": "Fedora 上使用 Samba",
-  "description": "Fedora Workstation 上配置 Samba 实现文件共享",
+  "description": "Fedora Workstation 上配置 Samba 实现局域网文件共享",
   "keywords": [
-    
+    "Samba", "SMB"
   ],
   "articleBody": "# 安装 sudo dnf install samba samba-client samba-common # 创建文件夹、赋权 mkdir -p ~/Shared chmod 777 ~/Shared # 追加内容到 /etc/samba/smb.conf sudo bash -c 'cat \u003e\u003e /etc/samba/smb.conf \u003c",
   "wordCount" : "153",
@@ -228,6 +230,8 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://ninjagopher.github.io/tags/samba/">Samba</a></li>
+      <li><a href="https://ninjagopher.github.io/tags/smb/">SMB</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://ninjagopher.github.io/posts/ssh-note/">
@@ -246,7 +250,7 @@
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Fedora 上使用 Samba on x"
-            href="https://x.com/intent/tweet/?text=Fedora%20%e4%b8%8a%e4%bd%bf%e7%94%a8%20Samba&amp;url=https%3a%2f%2fninjagopher.github.io%2fposts%2fsamba-linux%2f&amp;hashtags=">
+            href="https://x.com/intent/tweet/?text=Fedora%20%e4%b8%8a%e4%bd%bf%e7%94%a8%20Samba&amp;url=https%3a%2f%2fninjagopher.github.io%2fposts%2fsamba-linux%2f&amp;hashtags=Samba%2cSMB">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

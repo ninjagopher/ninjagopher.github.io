@@ -6,53 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Git Note | DeepSink</title>
-<meta name="keywords" content="">
-<meta name="description" content="Focus on what matters instead of fighting with Git.
-CONFIG
-git init                # 初始化仓库
-ssh -T git@github.com   # .pub 密钥上传后测试
-git config -l           # 查看配置
-git config --global --list  # 查看全局配置
-git config user.name &#34;Your Name&#34;    # 设置用户名
-git config user.email &#34;email@example.com&#34;   # 设置邮箱
-git remote add origin https://github.com/username/repo-name.git # 添加远程源
-git commit -a -m &#34;comment&#34;      # Stage Commit
-git push -u origin main         # 第一次push
-BRANCH
-# 创建分支，两条命令等价
-git checkout -b branch-a
-git switch -c branch-a
-# Add &amp; Commit
-git commit -a -m &#34;comment&#34; 
-# push 分支到远程
-git push origin branch-a
-# 切换分支
-git checkout main
-git switch main
-MERGE
-
-团队协作，需要记录谁在哪个分支干了什么。
-不太关注提交历史是否线性清爽。
-小团队或时间紧，不需要提前整理提交。
-
-git switch main          # 切换到主分支
-git pull origin main       # 更新主分支
-git merge origin/branch-a  # 合并分支
-# 解决冲突 &amp; 测试通过后
-git push origin main       # 推送合并结果
-REBASE
-
-保持提交历史线性，避免不必要的 merge commit
-减少合并冲突的复杂度（因为已经提前处理过了）
-
-git switch branch-a
-git rebase main      # 如果提示 “Current branch branch-a is up to date.”，则继续下一步
-# 解决冲突、测试后
-git switch main
-git merge feature/branch-a
-git push origin main
-Others
-修改远程仓库名后，本地更新 URL">
+<meta name="keywords" content="Git, GitHub">
+<meta name="description" content="Git 的一些基本操作">
 <meta name="author" content="">
 <link rel="canonical" href="https://ninjagopher.github.io/posts/git-note/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -103,61 +58,17 @@ Others
 </noscript><meta property="og:url" content="https://ninjagopher.github.io/posts/git-note/">
   <meta property="og:site_name" content="DeepSink">
   <meta property="og:title" content="Git Note">
-  <meta property="og:description" content="Focus on what matters instead of fighting with Git.
-CONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name &#34;Your Name&#34; # 设置用户名 git config user.email &#34;email@example.com&#34; # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git commit -a -m &#34;comment&#34; # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add &amp; Commit git commit -a -m &#34;comment&#34; # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 &amp; 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL">
+  <meta property="og:description" content="Git 的一些基本操作">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-04-17T13:54:09+08:00">
     <meta property="article:modified_time" content="2025-04-17T13:54:09+08:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Note">
-<meta name="twitter:description" content="Focus on what matters instead of fighting with Git.
-CONFIG
-git init                # 初始化仓库
-ssh -T git@github.com   # .pub 密钥上传后测试
-git config -l           # 查看配置
-git config --global --list  # 查看全局配置
-git config user.name &#34;Your Name&#34;    # 设置用户名
-git config user.email &#34;email@example.com&#34;   # 设置邮箱
-git remote add origin https://github.com/username/repo-name.git # 添加远程源
-git commit -a -m &#34;comment&#34;      # Stage Commit
-git push -u origin main         # 第一次push
-BRANCH
-# 创建分支，两条命令等价
-git checkout -b branch-a
-git switch -c branch-a
-# Add &amp; Commit
-git commit -a -m &#34;comment&#34; 
-# push 分支到远程
-git push origin branch-a
-# 切换分支
-git checkout main
-git switch main
-MERGE
-
-团队协作，需要记录谁在哪个分支干了什么。
-不太关注提交历史是否线性清爽。
-小团队或时间紧，不需要提前整理提交。
-
-git switch main          # 切换到主分支
-git pull origin main       # 更新主分支
-git merge origin/branch-a  # 合并分支
-# 解决冲突 &amp; 测试通过后
-git push origin main       # 推送合并结果
-REBASE
-
-保持提交历史线性，避免不必要的 merge commit
-减少合并冲突的复杂度（因为已经提前处理过了）
-
-git switch branch-a
-git rebase main      # 如果提示 “Current branch branch-a is up to date.”，则继续下一步
-# 解决冲突、测试后
-git switch main
-git merge feature/branch-a
-git push origin main
-Others
-修改远程仓库名后，本地更新 URL">
+<meta name="twitter:description" content="Git 的一些基本操作">
 
 
 <script type="application/ld+json">
@@ -186,9 +97,9 @@ Others
   "@type": "BlogPosting",
   "headline": "Git Note",
   "name": "Git Note",
-  "description": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \u0026#34;Your Name\u0026#34; # 设置用户名 git config user.email \u0026#34;email@example.com\u0026#34; # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git commit -a -m \u0026#34;comment\u0026#34; # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026amp; Commit git commit -a -m \u0026#34;comment\u0026#34; # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026amp; 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL\n",
+  "description": "Git 的一些基本操作",
   "keywords": [
-    
+    "Git", "GitHub"
   ],
   "articleBody": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git commit -a -m \"comment\" # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026 Commit git commit -a -m \"comment\" # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL\ngit remote set-url origin https://github.com/new-username/repo.git ",
   "wordCount" : "373",
@@ -329,12 +240,14 @@ Others
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://ninjagopher.github.io/tags/git/">Git</a></li>
+      <li><a href="https://ninjagopher.github.io/tags/github/">GitHub</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://ninjagopher.github.io/posts/neovim-note/">
     <span class="title">« 上一页</span>
     <br>
-    <span>Neovim 笔记</span>
+    <span>Neovim Note</span>
   </a>
   <a class="next" href="https://ninjagopher.github.io/posts/ssh-note/">
     <span class="title">下一页 »</span>
@@ -347,7 +260,7 @@ Others
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Git Note on x"
-            href="https://x.com/intent/tweet/?text=Git%20Note&amp;url=https%3a%2f%2fninjagopher.github.io%2fposts%2fgit-note%2f&amp;hashtags=">
+            href="https://x.com/intent/tweet/?text=Git%20Note&amp;url=https%3a%2f%2fninjagopher.github.io%2fposts%2fgit-note%2f&amp;hashtags=Git%2cGitHub">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

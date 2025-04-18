@@ -137,10 +137,10 @@
 <main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>SCIENCE OF DELUSION</h1>
+        <h1>Science of Delusion</h1>
     </header>
     <div class="entry-content">
-        🪶“When you have eliminated the impossible, whatever remains, however improbable, must be the truth” - Sherlock Holmes (AC Doyle)
+        ✍️ &ldquo;When you have eliminated the impossible, whatever remains, however improbable, must be the truth&rdquo; - Sherlock Holmes (AC Doyle)
     </div>
     <footer class="entry-footer">
         <div class="social-icons" >
@@ -168,14 +168,26 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Neovim 笔记
+    <h2 class="entry-hint-parent">Fedora 41
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>安装 Fedora Workstation 41 之后的一些配置</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-18 18:10:18 +0800 CST'>四月 18, 2025</span>&nbsp;·&nbsp;2 分钟</footer>
+  <a class="entry-link" aria-label="post link to Fedora 41" href="https://ninjagopher.github.io/posts/fedora41/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Neovim Note
     </h2>
   </header>
   <div class="entry-content">
     <p>Neovim &#43; LazyVim 笔记</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-18 00:35:28 +0800 CST'>四月 18, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
-  <a class="entry-link" aria-label="post link to Neovim 笔记" href="https://ninjagopher.github.io/posts/neovim-note/"></a>
+  <a class="entry-link" aria-label="post link to Neovim Note" href="https://ninjagopher.github.io/posts/neovim-note/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -184,9 +196,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Focus on what matters instead of fighting with Git.
-CONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name &#34;Your Name&#34; # 设置用户名 git config user.email &#34;email@example.com&#34; # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git commit -a -m &#34;comment&#34; # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add &amp; Commit git commit -a -m &#34;comment&#34; # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 &amp; 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL
-...</p>
+    <p>Git 的一些基本操作</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-17 13:54:09 +0800 CST'>四月 17, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to Git Note" href="https://ninjagopher.github.io/posts/git-note/"></a>
@@ -198,8 +208,7 @@ CONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后�
     </h2>
   </header>
   <div class="entry-content">
-    <p>复制一个密钥对到新的机器，可能修改密钥权限：
-# 先查看权限 ll ~/.ssh/ chmod 600 ~/.ssh/id_rsa # 添加到SSH Agent（可选但推荐） ssh-add ~/.ssh/id_rsa # 测试 ssh -T git@github.com # 输出：Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access. # 然后克隆项目 </p>
+    <p>SSH 相关笔记</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-17 13:52:18 +0800 CST'>四月 17, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to SSH Note" href="https://ninjagopher.github.io/posts/ssh-note/"></a>
@@ -211,7 +220,7 @@ CONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后�
     </h2>
   </header>
   <div class="entry-content">
-    <p>Fedora Workstation 上配置 Samba 实现文件共享</p>
+    <p>Fedora Workstation 上配置 Samba 实现局域网文件共享</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-17 02:47:51 +0800 CST'>四月 17, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to Fedora 上使用 Samba" href="https://ninjagopher.github.io/posts/samba-linux/"></a>

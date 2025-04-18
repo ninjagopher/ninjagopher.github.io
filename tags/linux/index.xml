@@ -6,8 +6,22 @@
     <description>Recent content in Linux on DeepSink</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 16 Apr 2025 21:40:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Apr 2025 18:10:18 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fedora 41</title>
+      <link>https://ninjagopher.github.io/posts/fedora41/</link>
+      <pubDate>Fri, 18 Apr 2025 18:10:18 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/fedora41/</guid>
+      <description>安装 Fedora Workstation 41 之后的一些配置</description>
+    </item>
+    <item>
+      <title>SSH Note</title>
+      <link>https://ninjagopher.github.io/posts/ssh-note/</link>
+      <pubDate>Thu, 17 Apr 2025 13:52:18 +0800</pubDate>
+      <guid>https://ninjagopher.github.io/posts/ssh-note/</guid>
+      <description>SSH 相关笔记</description>
+    </item>
     <item>
       <title>v2rayA 透明代理</title>
       <link>https://ninjagopher.github.io/posts/tproxy-v2raya/</link>

@@ -101,8 +101,8 @@
   "keywords": [
     "Fedora", "Fedora41"
   ],
-  "articleBody": "Fedora Workstation 41 安装安装之后的配置\n配置 DNF sudo vi /etc/dnf/dnf.conf # 编辑 dnf.conf # 添加下面的内容 [main] fastestmirror=True max_parallel_downloads=16 defaultyes=True # 默认yes，用户按下 Enter 键继续 keepcache=True # assumeyes=True 无交互，直接yes ~/.bashrc 配置 sudo vi ~/.bashrc # 编辑 ~/.bashrc # 、、 bind \"set completion-ignore-case on\" # Tab 补全忽略大小写 export HISTCONTROL=erasedups # 历史命令不重复 export HISTIGNORE=\"\u0026:ls:cd:pwd:clear\" # 忽略不重要的命令 source ~/.bashrc # 应用修改 配置 Grub 启动项（Dual Boot） sudo vi /etc/default/grub # 编辑 /etc/default/grub # 根据需要修改下面两行 GRUB_TIMEOUT=30 GRUB_DEFAULT=saved # 添加下面这行 GRUB_SAVEDEFAULT=true sudo -i # 切换到 oot 用户 grub2-mkconfig -o /boot/grub2/grub.cfg # 生成新的 GRUB 配置文件 更新 dnf repolist # 查看软件仓库 sudo dnf check-update # 检查更新 sudo dnf update # 更新 DNF 的使用 # 查找某个软件包 dnf repoquery dnf info dnf list --installed # 查找已安装的软件包 dnf remove # 卸载 dnf autoremove # 清理无用的依赖 dnf repolist # 查看启用的软件仓库 dnf --help # 查看帮助 启用 RPM Fusion \u0026 安装 VLC 参考 RPM Fusion Configuration\n添加 rpm fusion 软件仓库（包含自由软件和非自由软件） sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 启用 Cisco 的 OpenH264 编解码器 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 更新 “核心系统” 相关的软件包 sudo dnf update @core # 查看包含哪些软件包 dnf group info core 安装 VLC sudo dnf install vlc 多媒体相关 参考 RPM Fusion Multimedia\n将 ffmpeg-free 替换为 ffmpeg，并允许删除可能存在的软件包冲突 sudo dnf swap ffmpeg-free ffmpeg --allowerasing 更新 Fedora 系统中的 @multimedia 组的软件包 sudo dnf update @multimedia --setopt=\"install_weak_deps=False\" --exclude=PackageKit-gstreamer-plugin 替换 Mesa 驱动程序，以获得更广泛的视频解码支持（AMD 硬件加速） sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld # 通过替换 Mesa 的 VA-API 和 VDPAU 驱动程序，从 Fedora 默认仓库切换到 RPM Fusion 的 freeworld 仓库，从而获得更全面的硬件加速视频解码支持。 调节外接显示器亮度 dnf search ddcutil sudo dnf install ddcutil # 安装 ddcutil sudo ddcutil detect sudo ddcutil setvcp 10 # 调节亮度， 通常在 0 到 100 之间，表示亮度的百分比。 flatpak install flathub com.mattjakeman.ExtensionManager # 安装扩展管理器 # 最后安装 Brightness control using ddcutil 扩展 安装字体 在 Nerd Fonts 下载字体\nsudo mkdir -p /usr/share/fonts/jetbrains-nerd-fonts # 创建字体文件夹 sudo unzip ./JetBrainsMono.zip # 解压 sudo mv ./*.ttf /usr/share/fonts/jetbrains-nerd-fonts # 移动.ttf文件到对应的目录 fc-cache -fv # 更新字体缓存 fc-list | grep JetBrains # 检查是否成功加载 ",
-  "wordCount" : "692",
+  "articleBody": "Fedora Workstation 41 安装安装之后的配置\n配置 DNF sudo vi /etc/dnf/dnf.conf # 编辑 dnf.conf # 添加下面的内容 [main] fastestmirror=True max_parallel_downloads=16 defaultyes=True # 默认yes，用户按下 Enter 键继续 keepcache=True # assumeyes=True 无交互，直接yes ~/.bashrc 配置 sudo vi ~/.bashrc # 编辑 ~/.bashrc # 、、 bind \"set completion-ignore-case on\" # Tab 补全忽略大小写 export HISTCONTROL=erasedups # 历史命令不重复 export HISTIGNORE=\"\u0026:ls:cd:pwd:clear\" # 忽略不重要的命令 source ~/.bashrc # 应用修改 配置 Grub 启动项（Dual Boot） sudo vi /etc/default/grub # 编辑 /etc/default/grub # 根据需要修改下面两行 GRUB_TIMEOUT=30 GRUB_DEFAULT=saved # 添加下面这行 GRUB_SAVEDEFAULT=true sudo -i # 切换到 oot 用户 grub2-mkconfig -o /boot/grub2/grub.cfg # 生成新的 GRUB 配置文件 更新 dnf repolist # 查看软件仓库 sudo dnf check-update # 检查更新 sudo dnf update # 更新 DNF 的使用 # 查找某个软件包 dnf repoquery dnf info dnf list --installed # 查找已安装的软件包 dnf remove # 卸载 dnf autoremove # 清理无用的依赖 dnf repolist # 查看启用的软件仓库 dnf --help # 查看帮助 启用 RPM Fusion \u0026 安装 VLC 参考 RPM Fusion Configuration\n添加 rpm fusion 软件仓库（包含自由软件和非自由软件） sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 启用 Cisco 的 OpenH264 编解码器 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 更新 “核心系统” 相关的软件包 sudo dnf update @core # 更新 @core 软件包组 dnf group info core # 查看这个软件包组有哪些包 安装 VLC sudo dnf install vlc 多媒体相关 参考 RPM Fusion Multimedia\n将 ffmpeg-free 替换为 ffmpeg，并允许删除可能存在的软件包冲突 sudo dnf swap ffmpeg-free ffmpeg --allowerasing 更新 Fedora 系统中的 @multimedia 组的软件包 sudo dnf update @multimedia --setopt=\"install_weak_deps=False\" --exclude=PackageKit-gstreamer-plugin 替换 Mesa 驱动程序，以获得更广泛的视频解码支持（AMD 硬件加速） sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld # 通过替换 Mesa 的 VA-API 和 VDPAU 驱动程序，从 Fedora 默认仓库切换到 RPM Fusion 的 freeworld 仓库，从而获得更全面的硬件加速视频解码支持。 调节外接显示器亮度 dnf search ddcutil sudo dnf install ddcutil # 安装 ddcutil sudo ddcutil detect sudo ddcutil setvcp 10 # 调节亮度， 通常在 0 到 100 之间，表示亮度的百分比。 flatpak install flathub com.mattjakeman.ExtensionManager # 安装扩展管理器 # 最后安装 Brightness control using ddcutil 扩展 安装字体 在 Nerd Fonts 下载字体\nsudo mkdir -p /usr/share/fonts/jetbrains-nerd-fonts # 创建字体文件夹 sudo unzip ./JetBrainsMono.zip # 解压 sudo mv ./*.ttf /usr/share/fonts/jetbrains-nerd-fonts # 移动.ttf文件到对应的目录 fc-cache -fv # 更新字体缓存 fc-list | grep JetBrains # 检查是否成功加载 ",
+  "wordCount" : "703",
   "inLanguage": "zh",
   "datePublished": "2025-04-18T18:10:18+08:00",
   "dateModified": "2025-04-18T18:10:18+08:00",
@@ -120,6 +120,7 @@
   }
 }
 </script>
+    <link rel="stylesheet" href="/css/custom.css">
 </head>
 
 <body class="" id="top">
@@ -244,9 +245,9 @@
 </span></span><span class="line"><span class="cl">sudo -i                                   <span class="c1"># 切换到 oot 用户</span>
 </span></span><span class="line"><span class="cl">grub2-mkconfig -o /boot/grub2/grub.cfg    <span class="c1"># 生成新的 GRUB 配置文件</span>
 </span></span></code></pre></div><h3 id="更新">更新<a hidden class="anchor" aria-hidden="true" href="#更新">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf repolist <span class="c1"># 查看软件仓库</span>
-</span></span><span class="line"><span class="cl">sudo dnf check-update <span class="c1"># 检查更新</span>
-</span></span><span class="line"><span class="cl">sudo dnf update <span class="c1"># 更新</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf repolist                <span class="c1"># 查看软件仓库</span>
+</span></span><span class="line"><span class="cl">sudo dnf check-update       <span class="c1"># 检查更新</span>
+</span></span><span class="line"><span class="cl">sudo dnf update             <span class="c1"># 更新</span>
 </span></span></code></pre></div><h3 id="dnf-的使用">DNF 的使用<a hidden class="anchor" aria-hidden="true" href="#dnf-的使用">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查找某个软件包</span>
 </span></span><span class="line"><span class="cl">dnf repoquery &lt;pkg-name&gt;
@@ -270,9 +271,8 @@
 </span></span></code></pre></div><ol start="3">
 <li>更新 &ldquo;核心系统&rdquo; 相关的软件包</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf update @core
-</span></span><span class="line"><span class="cl"><span class="c1"># 查看包含哪些软件包</span>
-</span></span><span class="line"><span class="cl">dnf group info core
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf update @core   <span class="c1"># 更新 @core 软件包组</span>
+</span></span><span class="line"><span class="cl">dnf group info core     <span class="c1"># 查看这个软件包组有哪些包</span>
 </span></span></code></pre></div><ol start="4">
 <li>安装 VLC</li>
 </ol>

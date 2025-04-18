@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 18 Apr 2025 18:10:18 +0800</lastBuildDate>
     <atom:link href="https://ninjagopher.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fedora 41</title>
-      <link>https://ninjagopher.github.io/posts/fedora41/</link>
+      <title>Fedora 41 配置</title>
+      <link>https://ninjagopher.github.io/posts/fedora-config/</link>
       <pubDate>Fri, 18 Apr 2025 18:10:18 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/fedora41/</guid>
+      <guid>https://ninjagopher.github.io/posts/fedora-config/</guid>
       <description>安装 Fedora Workstation 41 之后的一些配置</description>
     </item>
     <item>

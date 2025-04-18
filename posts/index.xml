@@ -43,14 +43,23 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout main
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch main
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;merge&#34;&gt;MERGE&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;团队协作，需要记录谁在哪个分支干了什么。&lt;/li&gt;
+&lt;li&gt;不太关注提交历史是否线性清爽。&lt;/li&gt;
+&lt;li&gt;小团队或时间紧，不需要提前整理提交。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch main          &lt;span class=&#34;c1&#34;&gt;# 切换到主分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin main       &lt;span class=&#34;c1&#34;&gt;# 更新主分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge origin/branch-a  &lt;span class=&#34;c1&#34;&gt;# 合并分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解决冲突 &amp;amp; 测试通过后&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main       &lt;span class=&#34;c1&#34;&gt;# 推送合并结果&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rebase&#34;&gt;REBASE&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch feature/my-new-branch
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase main
+&lt;ul&gt;
+&lt;li&gt;保持提交历史线性，避免不必要的 merge commit&lt;/li&gt;
+&lt;li&gt;减少合并冲突的复杂度（因为已经提前处理过了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch branch-a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase main      &lt;span class=&#34;c1&#34;&gt;# 如果提示 “Current branch branch-a is up to date.”，则继续下一步&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解决冲突、测试后&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch main
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge feature/branch-a
@@ -59,11 +68,11 @@
 &lt;p&gt;修改远程仓库名后，本地更新 URL&lt;/p&gt;</description>
     </item>
     <item>
-      <title>SSH 笔记</title>
+      <title>SSH Note</title>
       <link>https://ninjagopher.github.io/posts/ssh-note/</link>
       <pubDate>Thu, 17 Apr 2025 13:52:18 +0800</pubDate>
       <guid>https://ninjagopher.github.io/posts/ssh-note/</guid>
-      <description>&lt;p&gt;复制一个密钥对到新的机器，要先修改密钥权限：&lt;/p&gt;
+      <description>&lt;p&gt;复制一个密钥对到新的机器，可能修改密钥权限：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 先查看权限&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ll ~/.ssh/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; ~/.ssh/id_rsa

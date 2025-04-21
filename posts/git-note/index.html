@@ -101,8 +101,8 @@
   "keywords": [
     "Git", "GitHub"
   ],
-  "articleBody": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 ssh -T git@github.com -i ~/.ssh/id_rsa git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git pull --rebase # 临时 rebase git add . git commit -m \"comment\" # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026 Commit git status git add . git commit -m \"comment\" git status git add . git commit -m \"comment\" # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main 多个 GitHub 账户 编辑 ~/.ssh/config\n# 账号A配置 Host github-usera # 别名，可以设置为用户名方便配置、避免混淆 HostName github.com User git IdentityFile ~/.ssh/id_rsa_a # 指定私钥 # 账号B配置 Host github-userb HostName github.com User git IdentityFile ~/.ssh/id_rsa_b Others 修改远程仓库名后，本地更新 URL\ngit remote set-url origin https://github.com/new-username/repo.git ",
-  "wordCount" : "462",
+  "articleBody": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 ssh -T git@github.com -i ~/.ssh/id_rsa git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 ssh -T git@github.com -i ~/.ssh/id_rsa git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git pull --rebase # 临时 rebase git pull --rebase # 临时 rebase git add . git commit -m \"comment\" # Stage Commit git push -u origin main # 第一次push git commit -m \"comment\" # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026 Commit git status git add . git commit -m \"comment\" git status git add . git commit -m \"comment\" git status git add . git commit -m \"comment\" # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main 多个 GitHub 账户 编辑 ~/.ssh/config\n# 账号A配置 Host gh-tom # 别名，可以设置为用户名方便配置、避免混淆 HostName github.com User git IdentityFile ~/.ssh/id_rsa_tom # 指定私钥 # 账号B配置 Host gh-jerry HostName github.com User git IdentityFile ~/.ssh/id_rsa_jerry 在各自的仓库修改远程地址：\n# username 替换为真实的 GitHub 用户名 git remote set-url origin git@gh-tom:/repo-name.git git remote set-url origin git@gh-jerry:/repo-name.git Others 修改远程仓库名后，本地更新 URL\ngit remote set-url origin https://github.com/new-username/repo.git ",
+  "wordCount" : "597",
   "inLanguage": "zh",
   "datePublished": "2025-04-17T13:54:09+08:00",
   "dateModified": "2025-04-17T13:54:09+08:00",
@@ -202,9 +202,19 @@
 </span></span><span class="line"><span class="cl">git config --global --list                    <span class="c1"># 查看全局配置</span>
 </span></span><span class="line"><span class="cl">git config user.name <span class="s2">&#34;Your Name&#34;</span>              <span class="c1"># 设置用户名</span>
 </span></span><span class="line"><span class="cl">git config user.email <span class="s2">&#34;email@example.com&#34;</span>     <span class="c1"># 设置邮箱</span>
+</span></span><span class="line"><span class="cl">git init                                      <span class="c1"># 初始化仓库</span>
+</span></span><span class="line"><span class="cl">ssh -T git@github.com                         <span class="c1"># .pub 密钥上传后测试</span>
+</span></span><span class="line"><span class="cl">ssh -T git@github.com -i ~/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">git config -l                                 <span class="c1"># 查看配置</span>
+</span></span><span class="line"><span class="cl">git config --global --list                    <span class="c1"># 查看全局配置</span>
+</span></span><span class="line"><span class="cl">git config user.name <span class="s2">&#34;Your Name&#34;</span>              <span class="c1"># 设置用户名</span>
+</span></span><span class="line"><span class="cl">git config user.email <span class="s2">&#34;email@example.com&#34;</span>     <span class="c1"># 设置邮箱</span>
 </span></span><span class="line"><span class="cl">git remote add origin https://github.com/username/repo-name.git <span class="c1"># 添加远程源</span>
 </span></span><span class="line"><span class="cl">git pull --rebase                             <span class="c1"># 临时 rebase</span>
+</span></span><span class="line"><span class="cl">git pull --rebase                             <span class="c1"># 临时 rebase</span>
 </span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span>                       <span class="c1"># Stage Commit</span>
+</span></span><span class="line"><span class="cl">git push -u origin main                       <span class="c1"># 第一次push</span>
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span>                       <span class="c1"># Stage Commit</span>
 </span></span><span class="line"><span class="cl">git push -u origin main                       <span class="c1"># 第一次push</span>
 </span></span></code></pre></div><h3 id="branch">BRANCH<a hidden class="anchor" aria-hidden="true" href="#branch">#</a></h3>
@@ -212,6 +222,9 @@
 </span></span><span class="line"><span class="cl">git checkout -b branch-a
 </span></span><span class="line"><span class="cl">git switch -c branch-a
 </span></span><span class="line"><span class="cl"><span class="c1"># Add &amp; Commit</span>
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span> 
 </span></span><span class="line"><span class="cl">git status
 </span></span><span class="line"><span class="cl">git add .
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span> 
@@ -248,16 +261,20 @@
 </span></span></code></pre></div><h3 id="多个-github-账户">多个 GitHub 账户<a hidden class="anchor" aria-hidden="true" href="#多个-github-账户">#</a></h3>
 <p>编辑 <em><strong>~/.ssh/config</strong></em></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 账号A配置</span>
-</span></span><span class="line"><span class="cl">Host github-usera       <span class="c1"># 别名，可以设置为用户名方便配置、避免混淆</span>
+</span></span><span class="line"><span class="cl">Host gh-tom       <span class="c1"># 别名，可以设置为用户名方便配置、避免混淆</span>
 </span></span><span class="line"><span class="cl">  HostName github.com
 </span></span><span class="line"><span class="cl">  User git
-</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/id_rsa_a       <span class="c1"># 指定私钥</span>
+</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/id_rsa_tom      <span class="c1"># 指定私钥</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 账号B配置</span>
-</span></span><span class="line"><span class="cl">Host github-userb
+</span></span><span class="line"><span class="cl">Host gh-jerry
 </span></span><span class="line"><span class="cl">  HostName github.com
 </span></span><span class="line"><span class="cl">  User git
-</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/id_rsa_b
+</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/id_rsa_jerry
+</span></span></code></pre></div><p>在各自的仓库修改远程地址：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># username 替换为真实的 GitHub 用户名</span>
+</span></span><span class="line"><span class="cl">git remote set-url origin git@gh-tom:&lt;username&gt;/repo-name.git 
+</span></span><span class="line"><span class="cl">git remote set-url origin git@gh-jerry:&lt;username&gt;/repo-name.git  
 </span></span></code></pre></div><h3 id="others">Others<a hidden class="anchor" aria-hidden="true" href="#others">#</a></h3>
 <p>修改远程仓库名后，本地更新 URL</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote set-url origin https://github.com/new-username/repo.git

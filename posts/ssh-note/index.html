@@ -102,8 +102,8 @@
   "keywords": [
     "SSH", "GitHub"
   ],
-  "articleBody": "复制一个密钥对到新的机器，可能修改密钥权限：\n# 生成密钥对 ssh-keygen -t rsa -b 4096 -C # 先查看权限 ll ~/.ssh/ chmod 600 ~/.ssh/id_rsa # 添加到SSH Agent（可选但推荐） ssh-add ~/.ssh/id_rsa # 测试 ssh -T git@github.com # 输出：Hi username! You've successfully authenticated, but GitHub does not provide shell access. # 然后克隆项目 ",
-  "wordCount" : "97",
+  "articleBody": "复制一个密钥对到新的机器，可能修改密钥权限：\n# 生成密钥对 ssh-keygen -t rsa -b 4096 -C # 先查看权限 ll ~/.ssh/ chmod 600 ~/.ssh/id_rsa # 添加到SSH Agent（可选但推荐） ssh-add ~/.ssh/id_rsa # 测试 ssh -T git@github.com ssh -T git@github.com -i ~/.ssh/id_rsa # 输出：Hi username! You've successfully authenticated, but GitHub does not provide shell access. # 然后克隆项目 ",
+  "wordCount" : "102",
   "inLanguage": "zh",
   "datePublished": "2025-04-17T13:52:18+08:00",
   "dateModified": "2025-04-17T13:52:18+08:00",
@@ -204,6 +204,7 @@
 </span></span><span class="line"><span class="cl">ssh-add ~/.ssh/id_rsa
 </span></span><span class="line"><span class="cl"><span class="c1"># 测试</span>
 </span></span><span class="line"><span class="cl">ssh -T git@github.com
+</span></span><span class="line"><span class="cl">ssh -T git@github.com -i ~/.ssh/id_rsa
 </span></span><span class="line"><span class="cl"><span class="c1"># 输出：Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 然后克隆项目</span>
 </span></span></code></pre></div>

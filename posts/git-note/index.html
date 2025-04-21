@@ -101,8 +101,8 @@
   "keywords": [
     "Git", "GitHub"
   ],
-  "articleBody": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git commit -a -m \"comment\" # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026 Commit git commit -a -m \"comment\" # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL\ngit remote set-url origin https://github.com/new-username/repo.git ",
-  "wordCount" : "373",
+  "articleBody": "Focus on what matters instead of fighting with Git.\nCONFIG git init # 初始化仓库 ssh -T git@github.com # .pub 密钥上传后测试 git config -l # 查看配置 git config --global --list # 查看全局配置 git config user.name \"Your Name\" # 设置用户名 git config user.email \"email@example.com\" # 设置邮箱 git remote add origin https://github.com/username/repo-name.git # 添加远程源 git add . git commit -m \"comment\" # Stage Commit git push -u origin main # 第一次push BRANCH # 创建分支，两条命令等价 git checkout -b branch-a git switch -c branch-a # Add \u0026 Commit git status git add . git commit -m \"comment\" # push 分支到远程 git push origin branch-a # 切换分支 git checkout main git switch main MERGE 团队协作，需要记录谁在哪个分支干了什么。 不太关注提交历史是否线性清爽。 小团队或时间紧，不需要提前整理提交。 git switch main # 切换到主分支 git pull origin main # 更新主分支 git merge origin/branch-a # 合并分支 # 解决冲突 \u0026 测试通过后 git push origin main # 推送合并结果 REBASE 保持提交历史线性，避免不必要的 merge commit 减少合并冲突的复杂度（因为已经提前处理过了） git switch branch-a git rebase main # 如果提示 “Current branch branch-a is up to date.”，则继续下一步 # 解决冲突、测试后 git switch main git merge feature/branch-a git push origin main Others 修改远程仓库名后，本地更新 URL\ngit remote set-url origin https://github.com/new-username/repo.git ",
+  "wordCount" : "379",
   "inLanguage": "zh",
   "datePublished": "2025-04-17T13:54:09+08:00",
   "dateModified": "2025-04-17T13:54:09+08:00",
@@ -202,14 +202,17 @@
 </span></span><span class="line"><span class="cl">git config user.name <span class="s2">&#34;Your Name&#34;</span>    <span class="c1"># 设置用户名</span>
 </span></span><span class="line"><span class="cl">git config user.email <span class="s2">&#34;email@example.com&#34;</span>   <span class="c1"># 设置邮箱</span>
 </span></span><span class="line"><span class="cl">git remote add origin https://github.com/username/repo-name.git <span class="c1"># 添加远程源</span>
-</span></span><span class="line"><span class="cl">git commit -a -m <span class="s2">&#34;comment&#34;</span>      <span class="c1"># Stage Commit</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span>      <span class="c1"># Stage Commit</span>
 </span></span><span class="line"><span class="cl">git push -u origin main         <span class="c1"># 第一次push</span>
 </span></span></code></pre></div><h3 id="branch">BRANCH<a hidden class="anchor" aria-hidden="true" href="#branch">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建分支，两条命令等价</span>
 </span></span><span class="line"><span class="cl">git checkout -b branch-a
 </span></span><span class="line"><span class="cl">git switch -c branch-a
 </span></span><span class="line"><span class="cl"><span class="c1"># Add &amp; Commit</span>
-</span></span><span class="line"><span class="cl">git commit -a -m <span class="s2">&#34;comment&#34;</span> 
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;comment&#34;</span> 
 </span></span><span class="line"><span class="cl"><span class="c1"># push 分支到远程</span>
 </span></span><span class="line"><span class="cl">git push origin branch-a
 </span></span><span class="line"><span class="cl"><span class="c1"># 切换分支</span>

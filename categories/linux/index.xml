@@ -16,13 +16,6 @@
       <description>安装 Fedora Workstation 41 之后的一些配置</description>
     </item>
     <item>
-      <title>Neovim Note</title>
-      <link>https://ninjagopher.github.io/posts/neovim-note/</link>
-      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/neovim-note/</guid>
-      <description>Neovim + LazyVim 笔记</description>
-    </item>
-    <item>
       <title>Fedora 上使用 Samba</title>
       <link>https://ninjagopher.github.io/posts/samba-linux/</link>
       <pubDate>Thu, 17 Apr 2025 02:47:51 +0800</pubDate>

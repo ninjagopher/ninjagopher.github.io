@@ -16,27 +16,6 @@
       <description>安装 Fedora Workstation 41 之后的一些配置</description>
     </item>
     <item>
-      <title>Neovim Note</title>
-      <link>https://ninjagopher.github.io/posts/neovim-note/</link>
-      <pubDate>Fri, 18 Apr 2025 00:35:28 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/neovim-note/</guid>
-      <description>Neovim + LazyVim 笔记</description>
-    </item>
-    <item>
-      <title>Git Note</title>
-      <link>https://ninjagopher.github.io/posts/git-note/</link>
-      <pubDate>Thu, 17 Apr 2025 13:54:09 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/git-note/</guid>
-      <description>Git 的一些基本操作</description>
-    </item>
-    <item>
-      <title>SSH Note</title>
-      <link>https://ninjagopher.github.io/posts/ssh-note/</link>
-      <pubDate>Thu, 17 Apr 2025 13:52:18 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/ssh-note/</guid>
-      <description>SSH 相关笔记</description>
-    </item>
-    <item>
       <title>Fedora 上使用 Samba</title>
       <link>https://ninjagopher.github.io/posts/samba-linux/</link>
       <pubDate>Thu, 17 Apr 2025 02:47:51 +0800</pubDate>

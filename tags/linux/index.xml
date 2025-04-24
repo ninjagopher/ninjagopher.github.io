@@ -16,13 +16,6 @@
       <description>安装 Fedora Workstation 41 之后的一些配置</description>
     </item>
     <item>
-      <title>SSH Note</title>
-      <link>https://ninjagopher.github.io/posts/ssh-note/</link>
-      <pubDate>Thu, 17 Apr 2025 13:52:18 +0800</pubDate>
-      <guid>https://ninjagopher.github.io/posts/ssh-note/</guid>
-      <description>SSH 相关笔记</description>
-    </item>
-    <item>
       <title>v2rayA 透明代理</title>
       <link>https://ninjagopher.github.io/posts/tproxy-v2raya/</link>
       <pubDate>Wed, 16 Apr 2025 21:40:45 +0800</pubDate>
